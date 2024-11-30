@@ -1,10 +1,60 @@
 <html>
 <head>
-    <title>User registration form for a competetive exam</title>
-    <link rel="stylesheet" type="text/css" href="registrationform.css">
+    <title>User Registration Form for a Competitive Exam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        form input, form select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        form input[type="button"], form input[type="reset"] {
+            width: calc(50% - 10px);
+            margin: 10px 5px 0 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+        }
+        form input[type="button"]:hover, form input[type="reset"]:hover {
+            background-color: #0056b3;
+        }
+        form input[type="reset"] {
+            background-color: #6c757d;
+        }
+        form input[type="reset"]:hover {
+            background-color: #5a6268;
+        }
+        form h1 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <form name="f1">
+        <h1>User Registration</h1>
         First name: <input type="text" id="firstname"><br>
         Last name: <input type="text" id="lastname"><br>
         Father's name: <input type="text" id="fathername"><br>
@@ -13,7 +63,7 @@
         Phone number: <input type="number" id="pno"><br>
         Date of Birth: <input type="date" id="dob"><br>
         Gender: 
-        <select  id="gender">
+        <select id="gender">
             <option value="Male">Male</option>
             <option value="Female">Female</option>
         </select><br>
@@ -24,7 +74,7 @@
             <option value="Under Graduation">Under Graduation</option>
         </select><br>
         Qualification type: <input type="text" id="qualitype"><br>
-        Upload passport size photo: <input type="file" accept="image/*"  id="passpic"><br>
+        Upload passport size photo: <input type="file" accept="image/*" id="passpic"><br>
         Upload signature: <input type="file" accept="image/*" id="sign"><br>
         <input type="button" value="Submit" onclick="get_info();">
         <input type="reset" value="Reset">
@@ -32,3 +82,4 @@
     <script src="registration_form.js"></script>
 </body>
 </html>
+
